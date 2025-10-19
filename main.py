@@ -2,12 +2,10 @@ clear()
 change_hat(Hats.Wizard_Hat)
 
 ## Global Variables
-pumpkinAreaSize = 6
+pumpkinAreaSize = get_world_size() // 2
 
 ## Imports
-import pumpkinArea
-import treePlanting
+import farm
 
 while True:
-	pumpkinArea.pumpkinAreaProcessor(pumpkinAreaSize)
-	treePlanting.treeAreaProcessor(pumpkinAreaSize)
+	farm.farmPlantProcessor(pumpkinAreaSize)
