@@ -6,7 +6,6 @@ def isLastPumpkin(pumpkinAreaSize):
 	
 def isInPumpkinArea(pumpkinAreaSize):
 	return get_pos_x() <= pumpkinAreaSize and get_pos_y() <= pumpkinAreaSize
-	
 
-			
-			
+def isEven(value):
+	return value % 2 == 0

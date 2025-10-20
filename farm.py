@@ -1,12 +1,11 @@
 import utils
-import movement
+import treeAndCarrot
 
-def farmPlantProcessor(pumpkinAreaSize):
+def farmPlantProcessor(worldSize, pumpkinAreaSize):
 	firstPumpkinId = 0
-	worldSize = get_world_size()
 	
-	for heightX in range(worldSize):
-		for lengthY in range(worldSize):
+	for heightY in range(worldSize):
+		for lengthX in range(worldSize):
 			if utils.isFirstPumpkin():
 				firstPumpkinId = measure()
 			 			
@@ -19,5 +18,7 @@ def farmPlantProcessor(pumpkinAreaSize):
 					if get_ground_type() != Grounds.Soil:
 						till()
 					plant(Entities.Pumpkin)
+			
+			treeAndCarrot.treeAndCarrotProcessor(heightY, lengthX, pumpkinAreaSize)
 			move(East)
 		move(North)
