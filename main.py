@@ -1,12 +1,13 @@
 clear()
-change_hat(Hats.Wizard_Hat)
+change_hat(Hats.Traffic_Cone)
 
 ## Global Variables
-pumpkinAreaSize = get_world_size() // 2
 worldSize = get_world_size()
+pumpkinAreaSize = 5
+sunflowerAreaSize = 1
 
 ## Imports
 import farm
 
 while True:
-	farm.farmPlantProcessor(worldSize, pumpkinAreaSize)
+	farm.farmPlantProcessor(worldSize, pumpkinAreaSize, sunflowerAreaSize)

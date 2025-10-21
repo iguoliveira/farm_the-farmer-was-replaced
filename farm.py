@@ -1,7 +1,9 @@
 import utils
 import treeAndCarrot
+import grass
+import sunflower
 
-def farmPlantProcessor(worldSize, pumpkinAreaSize):
+def farmPlantProcessor(worldSize, pumpkinAreaSize, sunflowerAreaSize):
 	firstPumpkinId = 0
 	
 	for heightY in range(worldSize):
@@ -20,5 +22,8 @@ def farmPlantProcessor(worldSize, pumpkinAreaSize):
 					plant(Entities.Pumpkin)
 			
 			treeAndCarrot.treeAndCarrotProcessor(heightY, lengthX, pumpkinAreaSize)
+			grass.grassProcessor(heightY, lengthX, pumpkinAreaSize, sunflowerAreaSize)
+			sunflower.sunflowerProcessor(heightY, lengthX, pumpkinAreaSize, sunflowerAreaSize)
+			
 			move(East)
 		move(North)
